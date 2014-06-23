@@ -1,4 +1,4 @@
-= Healthcheck
+### Healthcheck
 
 ```ruby
 gem 'aws-healthcheck'
