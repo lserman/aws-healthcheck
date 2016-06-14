@@ -5,7 +5,9 @@ module Healthcheck
     end
 
     def call(env)
-      return [200, {}, []] if env['PATH_INFO'] == '/healthcheck'
+      if env['PATH_INFO'] == '/healthcheck' && env['SERVER_PORT'] = '8080'
+        return [200, {}, []] 
+      end
       @app.call(env)
     end
   end
