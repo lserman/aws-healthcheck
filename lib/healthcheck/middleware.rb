@@ -6,7 +6,7 @@ module Healthcheck
 
     def call(env)
       return [200, {}, []] if env['PATH_INFO'] == '/healthcheck'
-      @app.call(env)
+      @app.call env
     end
   end
 end
