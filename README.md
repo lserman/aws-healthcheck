@@ -7,3 +7,9 @@ gem 'aws-healthcheck'
 ```
 
 Your Rails app now returns a 200 from `/healthcheck`.
+
+If `ENV['GIT_COMMIT']` is set, the response will also include that value in the body:
+
+```
+{ "commit": "abcdef123456" }
+```

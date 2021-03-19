@@ -1,0 +1,16 @@
+sudo: false
+language: ruby
+rvm:
+- 2.2.3
+- 2.3.0
+before_install: gem install bundler -v 1.13.6
+cache: bundler
+deploy:
+  provider: rubygems
+  gem:
+    master: aws-healthcheck
+  on:
+    repo: lserman/healthcheck
+    branch: master
+  api_key:
+    secure: Ph2hsMBioV9mlg1gAJSVqWdTsOj+HAW2in1ALAAv50kBTyRv5iNO8BF8F5uiEWVsBgIqn0AXfrI5RFz9auSq4MRO1Wb88dq1rbEymxv6qbXr+mDsG2HUuPLV/l002aQOTpzJpfktyNcau9dQv5erBH5ODwUTykpShlyWw3tqs4M=

@@ -7,9 +7,9 @@ module Healthcheck
     def call(env)
       if env['PATH_INFO'] == '/healthcheck' && env['SERVER_PORT'] == '8080'
         if compute_checks
-          return [200, {'Content-Type' => 'text/plain'}, []] 
+          return [200, {'Content-Type' => 'text/plain'}, []]
         else
-          return [500, {'Content-Type' => 'text/plain'}, []] 
+          return [500, {'Content-Type' => 'text/plain'}, []]
         end
       end
       @app.call(env)
